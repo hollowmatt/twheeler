@@ -1,0 +1,22 @@
+##
+EDIT THIS AND RENAME IT TO database.yml
+##
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username:
+  password:
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: twheeler_dev
+
+test: &test
+  <<: *default
+  database: twheeler_test
+
+
