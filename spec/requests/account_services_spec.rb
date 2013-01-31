@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe "AccountServices" do
-  describe "GET /account_services" do
+  describe "it should retrieve a Strava user" do
     it "works! (now write some real specs)" do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get account_services_path
-      response.status.should be(200)
+      pending "need to create the service and call it"
     end
   end
 end

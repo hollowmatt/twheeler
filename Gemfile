@@ -38,6 +38,7 @@ gem 'jquery-rails'
 
 gem 'strava-api'
 gem "simple_form", ">= 2.0.4"
+gem "guard-rspec", :group => :test
 gem "unicorn", ">= 4.3.1", :group => :production
 gem "pg", ">= 0.14.1"
 gem "haml", ">= 3.1.7"
