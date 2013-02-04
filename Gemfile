@@ -37,6 +37,10 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'strava-api'
+gem 'faraday'
+gem 'faraday_middleware'
+gem 'pry', '~> 0.9.9.6', :group => [:development, :test]
+gem 'pry-debugger', '~> 0.2.0', :group => [:development, :test]
 gem "simple_form", ">= 2.0.4"
 gem "guard-rspec", :group => :test
 gem "unicorn", ">= 4.3.1", :group => :production
