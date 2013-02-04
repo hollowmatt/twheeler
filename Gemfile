@@ -39,6 +39,7 @@ gem 'jquery-rails'
 gem 'strava-api'
 gem 'faraday'
 gem 'faraday_middleware'
+gem 'hashie', '~> 1.2.0'
 gem 'pry', '~> 0.9.9.6', :group => [:development, :test]
 gem 'pry-debugger', '~> 0.2.0', :group => [:development, :test]
 gem "simple_form", ">= 2.0.4"
