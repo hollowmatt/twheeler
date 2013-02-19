@@ -5,3 +5,4 @@ class User < Hashie::Dash
 	property :user_id
 	property :token
 	
+end

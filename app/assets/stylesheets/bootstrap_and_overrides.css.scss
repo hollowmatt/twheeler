@@ -1,0 +1,11 @@
+@import "bootstrap";
+body { padding-top: 60px; }
+@import "bootstrap-responsive";
+
+/*
+ * Bootstrap Overrides
+ */
+
+.hero-unit {
+  background-color: white;
+}

@@ -1,0 +1,35 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  %nav.navbar-inner
+    = link_to "TWheeler", root_path, id: 'logo'
+    / %ul.nav.pull-left
+    /   - if user_signed_in?
+    /     %li
+    /       = link_to current_user.name, '#'
+    / %ul.nav.pull-right
+    /   - if user_signed_in?
+    /     %li
+    /       = link_to 'Logout', '#', method: 'delete'
+    /   - else
+    /     %li
+    /       = link_to 'Login', '#'
+    /   - if user_signed_in?
+    /     %li
+    /       = link_to 'Edit account', '#'
+    /   - else
+    /     %li
+    /       = link_to 'Sign up', '#'
+    /   - if user_signed_in?
+    /     %li#fat-menu.dropdown
+    /     %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+    /       Rides
+    /       %b.caret
+    /     %ul.dropdown-menu
+    /       %li= link_to "List Rides", '#'
+    /       %li= link_to "Search", '#'
+    /     - if current_user.has_role? :admin
+    /       %li#fat-menu.dropdown
+    /         %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+    /           Admin
+    /           %b.caret
+    /         %ul.dropdown-menu
+    /           %li= link_to "User Admin", users_path

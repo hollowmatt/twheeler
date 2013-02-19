@@ -10,6 +10,12 @@ class StravaService
 		response = Hashie::Mash.new(user_from_response(raw_response))
 	end
 
+	def get_rides(user_id)
+		raw_response = Faraday.get "http://www.strava.com/api/v1/rides?athleteId=186629"
+		response = ride_from_response(raw_response)
+		return response
+	end
+
 	private
 		def user_params_for(user_name, password)
 			{
@@ -30,5 +36,14 @@ class StravaService
 			else
 				{status: status}
 			end
+		end
+
+		def ride_from_response(raw_response)
+			rides = []
+			data = JSON.parse(raw_response.env[:body])
+			data["rides"].each do |ride|
+				rides << Hashie::Mash.new({id: ride["id"], name: ride["name"]})
+			end
+			rides
 		end
 end
